@@ -8,31 +8,9 @@ Production-ready Azure infrastructure provisioned with Terraform, featuring App 
 
 ## Architecture
 
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                        Azure Cloud                               │
-│                                                                  │
-│  ┌────────────────────────────────────────────────────────────┐ │
-│  │                    Resource Group                          │ │
-│  │                                                            │ │
-│  │  ┌──────────────┐    ┌──────────────┐    ┌─────────────┐  │ │
-│  │  │  App Service │───▶│   Container  │    │   Azure     │  │ │
-│  │  │   (Web App)  │    │   Registry   │    │    DNS      │  │ │
-│  │  └──────┬───────┘    └──────────────┘    └─────────────┘  │ │
-│  │         │                                                  │ │
-│  │         ▼                                                  │ │
-│  │  ┌──────────────┐    ┌──────────────┐                     │ │
-│  │  │   CosmosDB   │    │   Storage    │                     │ │
-│  │  │  (Database)  │    │   Account    │                     │ │
-│  │  └──────────────┘    └──────────────┘                     │ │
-│  │                                                            │ │
-│  │  ┌──────────────────────────────────────────────────────┐ │ │
-│  │  │              Observability (O11y)                     │ │ │
-│  │  │  Application Insights + Log Analytics Workspace       │ │ │
-│  │  └──────────────────────────────────────────────────────┘ │ │
-│  └────────────────────────────────────────────────────────────┘ │
-└─────────────────────────────────────────────────────────────────┘
-```
+<div align="center">
+  <img src="docs/architecture-diagram.png" alt="Architecture Diagram" width="800"/>
+</div>
 
 ## Resources Provisioned
 
